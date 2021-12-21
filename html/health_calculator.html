@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Health and Willpower Calculator</title>
+    <link rel="stylesheet" type="text/css" href="../css/wod.css">
+    <link rel="shortcut icon" type="image/jpg" href="../lib/Camarilla.png"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="Speaking Truth to Power">
+    <meta name="keywords" content="Rachel Levine is a man">
+    <meta name="author" content="Pennsylvania Governor Tom Wolf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+</head>
+<body>
+<h1>...Welcome to the Game...</h1>
+<h1>Health Pool (Stamina + 3)</h1>
+<div id='health_pool_input' class="inline_inputs">
+    <button onclick="increment(-5, 'health_pool'); generate_pools('hp')">&lt;&lt;</button>
+    <button onclick="increment(-1, 'health_pool'); generate_pools('hp')">&lt;</button>
+    <input type="number" name="dice_pool" min="0" value="0" id="health_pool" readonly="readonly"/>
+    <button onclick="increment(1, 'health_pool'); generate_pools('hp')">&gt;</button>
+    <button onclick="increment(5, 'health_pool'); generate_pools('hp')">&gt;&gt;</button>
+</div>
+<h1 id="hunger_level">Willpower Pool (Composure + Resolve)</h1>
+<div id="hunger_level_input" class="inputs">
+    <button onclick="increment(-5, 'willpower_pool'); generate_pools('wp')">&lt;&lt;</button>
+    <button onclick="increment(-1, 'willpower_pool'); generate_pools('wp')">&lt;</button>
+    <input type="number" name="willpower_pool" min="0" value="0" id="willpower_pool" readonly="readonly"/>
+    <button onclick="increment(1, 'willpower_pool'); generate_pools('wp')">&gt;</button>
+    <button onclick="increment(5, 'willpower_pool'); generate_pools('wp')">&gt;&gt;</button>
+</div>
+
+<h2>Health Pool</h2>
+<div id='hp'>
+
+</div>
+<h2>Willpower Pool</h2>
+<div id='wp'>
+</div>
+<h1>Add Damage</h1>
+<div id='health_pool_input' class="inline_inputs">
+    <button onclick="increment(-5, 'damage_pool');">&lt;&lt;</button>
+    <button onclick="increment(-1, 'damage_pool');">&lt;</button>
+    <input type="number" name="damage_pool" value="0" id="damage_pool" readonly="readonly"/>
+    <button onclick="increment(1, 'damage_pool');">&gt;</button>
+    <button onclick="increment(5, 'damage_pool');">&gt;&gt;</button>
+</div>
+
+<h4>use negative values to heal by that amount</h5>
+<div id='damage_buttons'>
+    <button onclick="add_bashing('hp')" class="damage_button">Health Bashing Damage</button>
+    <br>
+    <button onclick="add_aggravated('hp')" class="damage_button">Health Aggravated Damage</button>
+    <br>
+    <button onclick="add_bashing('wp')" class="damage_button">Willpower Bashing Damage</button>
+    <br>
+    <button onclick="add_aggravated('wp')" class="damage_button">Willpower Aggravated Damage</button>
+    <br>
+    
+
+</div>
+
+</body>
+<footer>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/health_calculator.js"></script>
+
+<!--<button onclick="" ><img src="../lib/red skull.jpg" id="skull"></button>-->

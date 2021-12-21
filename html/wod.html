@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Throes of Fate</title>
+    <link rel="stylesheet" type="text/css" href="../css/wod.css">
+    <link rel="shortcut icon" type="image/jpg" href="../lib/Camarilla.png"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="Speaking Truth to Power">
+    <meta name="keywords" content="Rachel Levine is a man">
+    <meta name="author" content="Pennsylvania Governor Tom Wolf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+</head>
+<body>
+<h1>...Welcome to the Game...</h1>
+<h1>Dice Pool</h1>
+<div id='dice_pool_input' class="inputs">
+    <button onclick="increment(-5, 'dice_pool')">&lt;&lt;</button>
+    <button onclick="increment(-1, 'dice_pool')">&lt;</button>
+    <input type="number" name="dice_pool" min="1" value="1" id="dice_pool" readonly="readonly"/>
+    <button onclick="increment(1, 'dice_pool')">&gt;</button>
+    <button onclick="increment(5, 'dice_pool')">&gt;&gt;</button>
+</div>
+<br/>
+<h1 id="hunger_level">Hunger Level</h1>
+<div id="hunger_level_input" class="inputs">
+    <button onclick="increment(-5, 'hunger_pool')">&lt;&lt;</button>
+    <button onclick="increment(-1, 'hunger_pool')">&lt;</button>
+    <input type="number" name="hunger_pool" min="0" max="5" value="0" id="hunger_pool" readonly="readonly"/>
+    <button onclick="increment(1, 'hunger_pool')">&gt;</button>
+    <button onclick="increment(5, 'hunger_pool')">&gt;&gt;</button>
+</div>
+
+<br/>
+<div id='roll'>
+    <button id="roll_dice" onclick="show_results(evaluate_roll(roll_dice()))" ><img src="../lib/red skull.jpg" id="skull"></button>
+    <div id="roll_dice_result_div">
+        <h3 id="roll_dice_result">-</h3>
+    </div>
+    <div id="stats">
+        <h5 id="gap">RESULTS</h5>
+        <h2 id="total_successes"></h2>
+        <h2 id="hunger_crit"></h2>
+        <h2 id="hunger_fail"></h2>
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+
+<div id="ribbons">
+    <img id="banner_left" src="../lib/ghastly.jpg">
+    <img id="banner_right" src="../lib/messy crit.jpg">
+</div>
+
+<footer>
+    <div id="reset_div">
+        <button onclick="reset()" id="reset">Reset Values</button>
+    </div>
+</footer>
+<script type="text/javascript" src="../js/wod_scripts.js"></script>
+</body>

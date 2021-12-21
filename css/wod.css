@@ -1,0 +1,133 @@
+body {
+    align-self: center;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    
+    
+    background-repeat: no-repeat;
+    
+    background-position: center ;
+}
+
+input {
+    text-align: center;
+    cursor: default;
+    -moz-appearance: textfield;
+    font-family: 'Denk One', sans-serif;
+    height: 5%;
+    font-size: xx-large;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    text-align: center;
+    cursor: default;
+    -moz-appearance: textfield;
+    font-family: 'Denk One', sans-serif;
+    height: 15%;
+}
+
+.inline_inputs {
+    font-family: 'Denk One', sans-serif;
+    display: inline-block;
+}
+
+.inputs {
+    font-family: 'Denk One', sans-serif;
+}
+
+#gap {
+    color: aliceblue;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: large;
+    z-index: -999;
+}
+
+#banner_left {
+    cursor: default;
+    position: fixed;
+    left: 0px;
+    bottom:0px;
+    z-index: -998;
+    max-width: 30%;
+    height: 100%;
+    display: none;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: 999;
+}
+
+#banner_right {
+    position: fixed;
+    right: 0px;
+    bottom:0px;
+    z-index: -998;
+    height: 100%;
+    max-width: 30%;
+    display: none;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: 999;
+}
+
+#stats {
+    color: #FF1122;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#roll_dice_result {
+    color: #FF1122;
+}
+
+button {
+  border: 5px, solid, red;
+  background: rgba(80,80,80,.7);
+  color: red;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-size: 3rem;
+  cursor: pointer;
+  outline: transparent;
+  transition: background-color .25s ease; 
+  color: .25s ease; 
+  box-shadow: .15s ease;
+  box-shadow: 4px 4px 0 #888
+} 
+button:hover{
+    color: currentColor;
+    background: red;
+    box-shadow: 2px 2px 0 #888;
+}
+button:active{
+    box-shadow: 0 0 0 #888
+}
+
+
+
+#roll_dice {
+    background-color: black;
+}
+
+#skull {
+    height:100px;
+    
+}
+
+#reset_div {
+    display: none;
+}
+
+#generate_pools {
+    display: inline-block;
+    align-self: center;
+}
+
+#damage_button {
+    display: block;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Chronicles of Darkness</title>
+    <link rel="stylesheet" type="text/css" href="../css/wod.css">
+    <link rel="shortcut icon" type="image/jpg" href="../lib/Camarilla.png"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="Speaking Truth to Power">
+    <meta name="keywords" content="Rachel Levine is a man">
+    <meta name="author" content="Pennsylvania Governor Tom Wolf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+</head>
+<body>
+<h1>Dice Pool</h1>
+<div id='dice_pool_input' class="inputs">
+    <button onclick="increment(-5, 'dice_pool')">&lt;&lt;</button>
+    <button onclick="increment(-1, 'dice_pool')">&lt;</button>
+    <input type="number" name="dice_pool" min="1" value="1" id="dice_pool" readonly="readonly"/>
+    <button onclick="increment(1, 'dice_pool')">&gt;</button>
+    <button onclick="increment(5, 'dice_pool')">&gt;&gt;</button>
+</div>
+<br>
+<br>
+<button id="roll_dice" onclick="show_results(roll_dice())" ><img src="../lib/red skull.jpg" id="skull"></button>
+<br>
+<br>
+<h1>Result</h1>
+<h1 id="result_display"></h1>
+<div id="dice_results">
+    <h3 id="dice_rolls"></h3>
+</div>
+
+<script type="text/javascript" src="../js/cofd_scripts.js"></script>
+</body>
+</html>
